@@ -241,15 +241,16 @@ include::https://dev.mysql.com/doc/refman/8.0/en/alter-user.html[]
 include::https://dev.mysql.com/doc/refman/8.0/en/resetting-permissions.html[]
 
 include::https://flaviocopes.com/mysql-how-to-install[]
+-----
+mysql.server start
 
-*  mysql.server start
+mysql -u root -p
 
-* mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'pa55w0rd';
+(Optional. Run instead mysql_secure_installation from command-line)
 
-* ALTER USER 'root'@'localhost' IDENTIFIED BY 'pa55w0rd'; (Optional. Run instead mysql_secure_installation in command-line)
-
-* mysql.server stop
-
+mysql.server stop
+-----
 == See Also
 
 The following guides may also be helpful:
@@ -258,4 +259,39 @@ The following guides may also be helpful:
 * https://spring.io/guides/gs/serving-web-content/[Serving Web Content with Spring MVC]
 * https://dev.to/sandrogiacom/run-mysql-on-docker-and-use-in-your-java-app-jpn/[Exposing the database tables as REST endpoints]
 * https://reflectoring.io/bean-validation-with-spring-boot/[Spring boot  Validation]
+
+
+== Redis
+==== Download and Install
+-----
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make
+-----
+==== Starting Redis Server
+
+-----
+$ redis-server
+
+$ redis-server --maxheap 1024M
+-----
+==== Starting Redis Client
+-----
+$ redis-cli
+-----
+Once started use the monitor command as follows -
+-----
+$ monitor
+-----
+===== Check if Redis is working
+-----
+$ redis-cli ping
+
+PONG
+-----
+===== Shutdown Redis
+-----
+$ redis-cli shutdown
+-----
 

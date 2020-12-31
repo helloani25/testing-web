@@ -11,3 +11,25 @@ spring:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/petclinic
     username: root
     password: pa55w0rd
+
+  session:
+    store-type: redis # Session store type.
+    redis:
+      flush-mode: on_save
+      namespace: spring:session
+
+
+  security:
+    user:
+      password: password
+      name: user
+  server:
+    servlet:
+      session:
+        timeout: 5m # Session timeout. If a duration suffix is not specified, seconds is used.
+
+#server.servlet.session.cookie.http-only=true
+#server.servlet.session.cookie.secure=true
+#server.servlet.session.timeout=15m
+
+
