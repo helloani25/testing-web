@@ -234,6 +234,20 @@ Congratulations! You have developed a Spring application and tested it with JUni
 Spring `MockMvc` and have used Spring Boot to isolate the web layer and load a special
 application context.
 
+== Running the Application
+
+http://localhost:8080
+
+To add users:
+
+http://localhost:8080/add
+
+To view users:
+
+http://localhost:8080
+
+This applicaton does not support registration yet. I have to add functionality to do that. It does not save passwords either. Yet to integrate those features.
+
 == Connecting to MySQL
 
 include::https://dev.mysql.com/doc/refman/8.0/en/alter-user.html[]

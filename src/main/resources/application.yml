@@ -8,7 +8,7 @@ spring:
     show-sql: true
 
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/petclinic
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/petclinic?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: pa55w0rd
 
