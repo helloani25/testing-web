@@ -244,7 +244,7 @@ http://localhost:8080/add
 
 To view users:
 
-http://localhost:8080
+http://localhost:8080/users
 
 This applicaton does not support registration yet. I have to add functionality to do that. It does not save passwords either. Yet to integrate those features.
 
