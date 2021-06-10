@@ -240,7 +240,7 @@ http://localhost:8080
 
 To add users:
 
-http://localhost:8080/add
+http://localhost:8080/users/add
 
 To view users:
 
